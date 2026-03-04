@@ -12,7 +12,7 @@ const misconceptionSets = [
       {
         title: "AI is only for big tech.",
         reality:
-          "Practical AI works in every sector—operations, finance, support, HR, healthcare, and manufacturing—wherever decisions repeat and data exists.",
+          "Practical AI works in every sector operations, finance, support, HR, healthcare, and manufacturing wherever decisions repeat and data exists.",
         gradient: "from-blue-500 to-cyan-500",
       },
       {
@@ -24,7 +24,7 @@ const misconceptionSets = [
       {
         title: "GenAI is plug-and-play.",
         reality:
-          "Reliable systems need retrieval, guardrails, evals, and monitoring—especially when accuracy, privacy, and security matter.",
+          "Reliable systems need retrieval, guardrails, evals, and monitoring especially when accuracy, privacy, and security matter.",
         gradient: "from-blue-600 to-indigo-600",
       },
     ],
@@ -43,13 +43,13 @@ const misconceptionSets = [
       {
         title: "Deployment is the finish line.",
         reality:
-          "Production AI needs drift checks, human feedback loops, and regular iteration—just like any mission-critical system.",
+          "Production AI needs drift checks, human feedback loops, and regular iteration just like any mission-critical system.",
         gradient: "from-blue-500 to-cyan-600",
       },
       {
         title: "Security can be added later.",
         reality:
-          "Security-first architecture (access control, data boundaries, audit trails) avoids expensive rework and compliance risk.",
+          "Security first architecture (access control, data boundaries, audit trails) avoids expensive rework and compliance risk.",
         gradient: "from-cyan-600 to-blue-600",
       },
     ],
@@ -174,7 +174,7 @@ export function Engagement() {
             <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 
                            bg-blue-500/10 px-4 py-1.5 text-sm font-medium text-blue-400 backdrop-blur-xl">
               <Lightbulb className="h-3.5 w-3.5" />
-              What we help you understand
+              <span className="text-slate-300"> What we help you understand</span>
             </span>
             <div className="h-px w-8 bg-gradient-to-l from-transparent to-blue-400" />
           </motion.div>

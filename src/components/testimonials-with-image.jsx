@@ -59,25 +59,25 @@ const testimonials = [
     designation: "Proprietor",
     company: "Rose Associates",
     quote:
-      "Intelidge built a complete automation system for Rose Associates that streamlined our 100–200 daily water orders through WhatsApp. The solution automated order capture, area-based delivery assignment, and status tracking using a simple Google Sheets backend. It significantly reduced manual coordination and improved accuracy while remaining easy for our non-technical staff to use.",
+      "Intelidge built an automation system for Rose Associates that streamlined our 100–200 daily WhatsApp water orders with automated order capture, delivery assignment, and tracking via a simple backend. It reduced manual work and improved accuracy while staying easy for non-technical staff to use.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Neha Sharma",
-    designation: "Product Manager",
-    company: "CloudScale SaaS",
+    name: "Karan Patel",
+    designation: "Freelance Marketing Consultant",
+    company: "Freelancer",
     quote:
-      "Very strong technical understanding and execution. The team delivers exactly what they promise, on time and with exceptional quality.",
+      "Intelidge helped me automate lead collection and follow-ups from my campaigns. The system organizes incoming inquiries automatically and logs them into a dashboard, saving me hours of manual work every week.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Rahul Mehta",
-    designation: "Founder & CEO",
-    company: "ShopFast E-commerce",
+    name: "Sneha Kulkarni",
+    designation: "Freelance Graphic Designer",
+    company: "SK Design Studio",
     quote:
-      "From idea to deployment, the experience was smooth and professional. They transformed our vision into a production-ready AI system.",
+      "Intelidge helped me automate client onboarding and built a tracking system that collects project details and organizes them automatically. It made managing multiple clients much easier.",
     rating: 5,
   },
 ]
@@ -114,16 +114,26 @@ export function TestimonialsStacked() {
         className="relative mx-auto max-w-7xl px-6"
       >
         {/* Heading */}
-        <motion.div variants={fadeUp} className="mb-20 text-center">
-          <h2 className="text-4xl font-semibold sm:text-5xl lg:text-6xl">
-            What our clients say about
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              working with us
-            </span>
-          </h2>
-        </motion.div>
 
+<motion.div variants={fadeUp} className="mb-20 text-center">
+
+  <div className="mb-4 flex items-center justify-center gap-2">
+    <div className="h-px w-8 bg-gradient-to-r from-transparent to-blue-500" />
+    <span className="inline-flex items-center gap-2 rounded-full border border-slate-700/50 bg-slate-900/40 px-4 py-1.5 text-sm font-medium text-slate-300 backdrop-blur-xl">
+      <Star className="h-3.5 w-3.5 text-blue-400" />
+      Client Testimonials
+    </span>
+    <div className="h-px w-8 bg-gradient-to-l from-transparent to-blue-500" />
+  </div>
+
+  <h2 className="text-4xl font-semibold sm:text-5xl lg:text-6xl">
+    What our clients say about
+    <br />
+    <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+      working with us
+    </span>
+  </h2>
+</motion.div>
         <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
           {/* LEFT — Stacked Cards */}
           <motion.div
@@ -189,7 +199,7 @@ export function TestimonialsStacked() {
                 exit="exit"
                 transition={{ duration: 0.4 }}
               >
-                <div className="relative h-[260px] overflow-hidden">
+                <div className="relative h-[320px] flex flex-col justify-between">
                   <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-xl">
                     <Quote className="h-8 w-8 text-white" />
                   </div>

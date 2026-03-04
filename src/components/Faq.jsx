@@ -3,30 +3,39 @@ import { motion, AnimatePresence } from "framer-motion"
 import { fadeInUp, staggerContainer } from "./animations"
 import { Plus, Minus, HelpCircle, MessageCircle, Mail } from "lucide-react"
 
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+}
+
 const faqs = [
   {
     q: "What types of AI solutions do you build?",
-    a: "We deliver end-to-end AI systems including GenAI (RAG, agents, copilots), computer vision (OCR, detection), predictive ML, and workflow automation—designed to integrate with your existing stack.",
+    a: "We deliver end to end AI systems including GenAI (RAG, agents, copilots), computer vision (OCR, detection), predictive ML, and workflow automation designed to integrate with your existing stack.",
   },
   {
     q: "How do you start a project?",
-    a: "We begin with discovery: use-case definition, data assessment, security constraints, and success metrics. Then we propose a plan—MVP → validation → scale—with clear milestones, timeline, and cost range.",
+    a: "We begin with discovery: Usecase definition, Data assessment, Security constraints, and Success metrics. Then we propose a plan. MVP to validation and then we scale with clear milestones,timeline, and cost range.",
   },
   {
-    q: "Can you deploy on-premise or inside our VPC?",
-    a: "Yes. We support cloud, on-prem, and VPC deployments, including private model endpoints, network isolation, and role-based access controls.",
+    q: "Can you deploy on premise or inside our VPC?",
+    a: "Yes. We support cloud, on prem, and VPC deployments, including private model endpoints, network isolation, and role based access controls.",
   },
   {
     q: "How do you prevent hallucinations in GenAI apps?",
-    a: "We use RAG with grounded sources, strict prompting, tool/function constraints, output validation, and automated evals. For high-risk flows, we add human-in-the-loop review.",
+    a: "We use RAG with grounded sources, strict prompting, tool/function constraints, output validation, and automated evals. For high risk flows, we add human in the loop review.",
   },
   {
     q: "What data do you need to get started?",
-    a: "A small sample is enough: documents, logs, forms, images, or database extracts—plus the target workflow and definition of 'good output'. We can also start with synthetic or staged data if needed.",
+    a: "A small sample is enough: documents, logs, forms, images, or database extracts plus the target workflow and definition of 'good output'. We can also start with synthetic or staged data if needed.",
   },
   {
     q: "How do you measure success?",
-    a: "We define measurable KPIs early—accuracy, latency, cost per request, and adoption. For GenAI, we also track groundedness and safety metrics through evaluations and audits.",
+    a: "We define measurable KPIs early accuracy, latency, cost per request, and adoption. For GenAI, we also track groundedness and safety metrics through evaluations and audits.",
   },
 ]
 
@@ -61,21 +70,25 @@ export function FAQs() {
           viewport={{ once: true, amount: 0.2 }}
           className="text-center"
         >
-          <motion.div
-            variants={fadeInUp}
-            className="mb-4 flex items-center justify-center gap-2"
-          >
+          
+          <motion.div variants={item} className="mb-4 flex items-center justify-center gap-2">
+            <div className="h-px w-8 bg-gradient-to-r from-transparent to-blue-500" />
             <span className="inline-flex items-center gap-2 rounded-full border border-slate-700/50 bg-slate-900/40 px-4 py-1.5 text-sm font-medium text-slate-300 backdrop-blur-xl">
               <HelpCircle className="h-3.5 w-3.5 text-blue-400" />
               Frequently Asked Questions
             </span>
+            <div className="h-px w-8 bg-gradient-to-l from-transparent to-blue-500" />
           </motion.div>
 
           <motion.h2
             variants={fadeInUp}
             className="mt-4 text-4xl font-semibold sm:text-5xl lg:text-6xl"
           >
-            Everything you need to know
+            Everything you need to
+            <br/>
+            <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            know
+            </span>
           </motion.h2>
 
           <motion.p

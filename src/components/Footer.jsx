@@ -5,8 +5,10 @@ import {
   Clock,
   ArrowUpRight,
   Linkedin,
+  Instagram,
   Shield,
   Activity,
+  Facebook,
 } from "lucide-react"
 import { Logo } from "./Logo"
 
@@ -45,15 +47,15 @@ export function Footer() {
             </div>
 
             <p className="mb-8 max-w-md text-sm leading-relaxed text-white/70">
-              We build secure, production-ready AI systems from strategy to
-              deployment — engineered for accuracy, performance, and scale.
+              We build secure, production ready AI systems from strategy to
+              deployment. Engineered for accuracy, performance, and scale.
             </p>
 
             <div className="space-y-4 text-sm text-white/60">
 
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-cyan-400" />
-                <span>Vadodara, India • Delivering globally</span>
+                <span>Based in Vadodara, India 🇮🇳. Delivering globally</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -71,10 +73,7 @@ export function Footer() {
             <div className="mt-8">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full
-                           bg-blue-600 px-6 py-3 text-sm font-semibold
-                           text-white shadow-lg shadow-blue-900/40
-                           transition hover:bg-blue-500"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 text-base font-semibold text-white"
               >
                 Get in Touch
                 <ArrowUpRight className="h-4 w-4" />
@@ -140,7 +139,7 @@ export function Footer() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/intelidge"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-9 w-9 items-center justify-center rounded-full
@@ -148,6 +147,27 @@ export function Footer() {
                          transition hover:border-blue-400/50 hover:bg-blue-500/20"
             >
               <Linkedin className="h-4 w-4 text-white/70" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/intelidge.ai?igsh=eHF1bHQ4eWd0MzFu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full
+                         border border-white/20 bg-white/5
+                         transition hover:border-blue-400/50 hover:bg-blue-500/20"
+            >
+              <Instagram className="h-4 w-4 text-white/70" />
+            </a>
+            <a
+              href="https://facebook.com/intelidge"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full
+                         border border-white/20 bg-white/5
+                         transition hover:border-blue-400/50 hover:bg-blue-500/20"
+            >
+              <Facebook className="h-4 w-4 text-white/70" />
             </a>
           </div>
         </div>

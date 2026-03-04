@@ -41,7 +41,7 @@ const services = [
     id: "models",
     icon: Brain,
     title: "Custom Model Development",
-    description: "Domain-specific ML & LLM solutions optimized for accuracy, latency, and cost.",
+    description: "Domain specific ML & LLM solutions optimized for accuracy, latency, and cost.",
     gradient: "from-blue-600 to-indigo-600",
     span: "md:col-span-1",
   },

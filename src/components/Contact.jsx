@@ -26,7 +26,7 @@ export function Contact() {
   const onSubmit = async (e) => {
     e.preventDefault()
 
-    // ✅ capture form element immediately (prevents "reset of null")
+   
     const formEl = e.currentTarget
 
     setStatus({ type: "loading", msg: "Sending…" })
@@ -41,7 +41,6 @@ export function Contact() {
         message: String(form.get("message") || "").trim(),
       }
 
-      // ✅ frontend validation (matches backend required fields)
       if (!payload.full_name || !payload.work_email || !payload.message) {
         setStatus({ type: "error", msg: "Please fill Full name, Work email, and Message." })
         return
@@ -56,13 +55,12 @@ export function Contact() {
       const data = await res.json().catch(() => ({}))
 
       if (!res.ok) {
-        // helpful error message
+  
         throw new Error(data?.error || `Failed to send message (status ${res.status})`)
       }
 
       setStatus({ type: "success", msg: "Thanks! We'll reach out within 24 hours." })
 
-      // ✅ reset safely
       if (formEl && typeof formEl.reset === "function") {
         formEl.reset()
       }
@@ -132,7 +130,7 @@ export function Contact() {
           >
             Let's build something intelligent
             <br />
-            <span className="bg-gradient-to-r from-slate-200 via-blue-100 to-slate-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
               securely
             </span>
           </motion.h2>
@@ -193,7 +191,7 @@ export function Contact() {
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Response time</p>
                 <p className="mt-2 text-xl font-semibold text-white">Within 24 hours</p>
-                <p className="mt-1 text-xs text-slate-500">Mon–Sat</p>
+                <p className="mt-1 text-xs text-slate-500">Mon – Sat</p>
               </motion.div>
 
               <motion.div
@@ -206,8 +204,16 @@ export function Contact() {
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Best for</p>
                 <p className="mt-2 text-xl font-semibold text-white">AI MVPs & Scale</p>
-                <p className="mt-1 text-xs text-slate-500">GenAI • CV • Automation</p>
+                <p className="mt-1 text-xs text-slate-500">AI/ML • CV • Automation</p>
               </motion.div>
+            </motion.div>
+
+            <motion.div variants={item} className="relative mt-6 flex items-center gap-2 text-sm text-slate-400">
+              <Mail className="h-4 w-4 text-blue-400 shrink-0" />
+              <span>Or email us at </span>
+              <a href="mailto:info@intelidge.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                info@intelidge.com
+              </a>
             </motion.div>
           </motion.div>
 
@@ -343,7 +349,7 @@ export function Contact() {
                     {status.type === "success" ? (
                       <CheckCircle2 className="h-4 w-4 flex-shrink-0" />
                     ) : (
-                      <span className="flex h-4 w-4 items-center justify-center text-base">⚠</span>
+                      <span className="flex h-4 w-4 items-center justify-center text-base">⚠️</span>
                     )}
                     <span>{status.msg}</span>
                   </div>

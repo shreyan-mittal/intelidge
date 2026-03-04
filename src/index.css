@@ -6,6 +6,7 @@
 
 :root {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth; 
   --font-display: "Outfit", system-ui, sans-serif;
   color: #e9ecf5;
   background-color: #07090f;

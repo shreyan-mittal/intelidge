@@ -53,7 +53,7 @@ export function WhyUs() {
       number: "01",
       title: "Discover",
       timeline: "Week 1-2",
-      description: "Identify high-ROI use-cases, map data, define KPIs",
+      description: "Identify high ROI usecases, map data, define KPIs",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
